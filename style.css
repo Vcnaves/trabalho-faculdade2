@@ -1,0 +1,410 @@
+/* Importação da fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* Estilos globais */
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+/* Estilos do corpo (body) */
+body {
+    height: 100vh;
+    background-color: #000;
+    background-image: url('./public/background_image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Estilos para todas as imagens (img) */
+img {
+    width: 100%;
+    display: flex;
+}
+
+/* Estilos para links (a) */
+a {
+    text-decoration: none;
+}
+
+/* Estilos para a barra de navegação (nav) */
+nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+/* Estilos para o logotipo da navegação (nav-logo) */
+.nav-logo {
+    max-width: 100px;
+}
+
+/* Estilos para os links da navegação (nav-links) */
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+/* Estilos para os links da navegação (link) */
+.link a {
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: #fff;
+}
+
+.link a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #1d4ed8;
+    transition: all 0.3s ease;
+}
+
+.link a:hover::after {
+    width: 70%;
+}
+
+/* Estilos para botões (btn) */
+.btn {
+    padding: 1rem;
+    color: #fff;
+    background-color: #1d4ed8;
+    border-radius: 5px;
+    line-height: 1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #1e40af;
+}
+
+/* Estilos para o efeito de desfoque (blur) */
+.blur {
+    position: absolute;
+    box-shadow: 0 0 1000px 50px #1d4ed8;
+    z-index: -100;
+}
+
+/* Estilos para o cabeçalho (header) */
+header {
+    position: relative;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Estilos para o conteúdo do cabeçalho (content) */
+header .content h5 {
+    margin-bottom: 1rem;
+    color: #ccc;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+header .content h1 {
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 4rem;
+}
+
+header .content h1 span {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #fff;
+}
+
+header .content p {
+    margin-bottom: 2rem;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #fff;
+}
+
+/* Estilos para a imagem do cabeçalho (image) */
+header .image {
+    position: relative;
+}
+
+header .image::before {
+    content: "o";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 38rem;
+    font-weight: 400;
+    line-height: 20rem;
+    color: #1d4ed8;
+    opacity: 0.2;
+    z-index: -100;
+}
+
+header .image img {
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Estilos para o container */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+}
+
+/* Estilos para o título fixado (titulo-fixado) na seção */
+section .titulo-fixado {
+    text-align: center;
+    line-height: 3.5;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+/* Estilos para o título fixado (titulo-fixado2) na seção de história */
+section .titulo-fixado2 {
+    text-align: center;
+    line-height: 3.5;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+/* Estilos para o título fixado (titulo-fixado3) na seção de linguagens */
+section .titulo-fixado3 {
+    text-align: center;
+    line-height: 3.5;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+section .titulo-fixado4 {
+    text-align: center;
+    line-height: 3.5;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+/* Estilos para a classe .texto */
+.texto {
+    color: #ffffffdf;
+    padding: 1rem;
+    font-size: 22px;
+    text-align: justify;
+    margin: 30px 150px;
+    line-height: 1.5;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+/* Estilos para a classe .subtitulo dentro de h4 */
+h4 .subtitulo {
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+/* Estilos para h4 quando hover (sobrescrita da classe .subtitulo) */
+h4:hover {
+    text-decoration: underline;
+}
+
+/* Animação de borda do texto quando hover */
+.texto:hover {
+    transform: scale(1.2);
+    transition: transform 1s;
+}
+
+/* Estilos para o título fixado (titulo-fixado) na seção */
+.titulo-fixado {
+    background-color: rgba(0, 0, 0, 0.653);
+    position: sticky;
+    top: 0;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 24px;
+    z-index: 100;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 50px;
+}
+
+/* Estilos para o título fixado (titulo-fixado2) na seção de história */
+.titulo-fixado2 {
+    background-color: rgba(0, 0, 0, 0.653);
+    position: sticky;
+    top: 0;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 24px;
+    z-index: 100;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 50px;
+}
+
+/* Estilos para o título fixado (titulo-fixado3) na seção de linguagens */
+.titulo-fixado3 {
+    background-color: rgba(0, 0, 0, 0.653);
+    position: sticky;
+    top: 0;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 24px;
+    z-index: 100;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 50px;
+}
+
+/* Estilos para o título fixado (titulo-fixado4) na seção de exemplos */
+.titulo-fixado4 {
+    background-color: rgba(0, 0, 0, 0.653);
+    position: sticky;
+    top: 0;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 24px;
+    z-index: 100;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 50px;
+}
+/* Estilos para o elemento com id "linha" */
+#linha {
+    border-top: 2px solid #fff;
+    margin: 0 auto;
+    margin-top: -20px;
+    width: 90%;
+    transform: scale(1.0);
+    transition: transform 1s;
+}
+
+/* Estilos para o rodapé (footer) */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Estilos para a seção de ícones de contato (contact-icons) no rodapé */
+.contact-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Estilos para os ícones de contato (contact-icon) no rodapé */
+.contact-icon {
+    font-size: 24px;
+    color: #fff;
+    margin: 5px 0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-icon:hover {
+    color: #ff3355;
+}
+
+/* Estilos para a seção de informações do site (site-info) no rodapé */
+.site-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos para o título animado (animated-title) na seção de informações do site */
+.animated-title {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+/* Estilos para a lista animada (animated-list) na seção de informações do site */
+.animated-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* Estilos para os itens da lista animada (animated-list li) na seção de informações do site */
+.animated-list li {
+    margin: 5px 0;
+}
+
+/* Estilos para os links na lista animada (animated-list a) na seção de informações do site */
+.animated-list a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.animated-list a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para a seção de créditos (credits) no rodapé */
+.credits {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Estilos para a equipe criativa (creative-team) no rodapé */
+.creative-team {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilos para os membros da equipe criativa (creative-team li) no rodapé */
+.creative-team li {
+    margin: 0 10px;
+}
+
+/* Estilos para os links dos membros da equipe criativa (creative-team a) no rodapé */
+.creative-team a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.creative-team a:hover {
+    color: #ff3355;
+}
